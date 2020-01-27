@@ -32,22 +32,9 @@
                 onclick="setGrade()">Calculate</button>
             <br>
         </div>
-        <div id="tryagain" style="display: none;">
-            <div id="display1" style="border: 10px; padding: 10px;">
-                <p id="resultObject"></p>
-            </div>
-            <div div id="display2" style="border: 10px; padding: 10px;">
-                <p id="resultObject"></p>
-                <button class="animated hinge" type="button" style="margin-top:20; align: center; "onclick="tryagain()" >Try
-                    Again?</button>
-            </div>
-        </div>
-
     </div>
-
-
     <script>
-        function setGrade() {
+    function setGrade() {
     var aPlus, aOnly, bOnly, cOnly, dOnly, eOnly ;
     aPlus = Number(document.getElementById("aplus").value);
     aOnly = Number(document.getElementById("aonly").value);
@@ -56,20 +43,24 @@
     dOnly = Number(document.getElementById("donly").value);
     eOnly = Number(document.getElementById("eonly").value);
     function KnowYourGrade(aPlus, aOnly, bOnly, cOnly, dOnly, eOnly);
-  
-  
+    }
     function KnowYourGrade(aPlus, aOnly, bOnly, cOnly, dOnly, eOnly ) {
-      var myGrade;
-      console.log("Value Changed");
+        var myGrade;
+        console.log("Value Changed");
         myGrade = (aPlus * 10 + aOnly * 9 + bOnly * 8 + cOnly * 7 + dOnly * 6 + eOnly * 5) / (aPlus + aOnly + bOnly + cOnly + dOnly + eOnly);
         document.getElementById("resultObject").innerHTML =  myGrade;
         console.log("Value Changed");
-      }
     }
-  
+  </script>
 
-
-    </script>
+<div id="tryagain" style="display: none;">
+    <div id="display1" style="border: 10px; padding: 10px;">
+        <p id="resultObject"></p>
+    </div>
+        <button class="animated hinge" type="button" style="margin-top:20; align: center; "onclick="tryagain()" >Try
+            Again?</button>
+    </div>
+</div>
     <footer style="  position: relative; margin-top:40px; right: 0; bottom: 0; width: 100%; color: white; text-align: center; ">
         Made with 💖
     </footer>
