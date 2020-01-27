@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Know Your Grade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Deepak Choudhary" content="HTML,CSS,JavaScript">
+    <link rel="stylesheet" src="https://cdn.jsdelivr.net/gh/rsms/interface@1.1/docs/interface.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+    <link rel="stylesheet" href="./myCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<body>
+    <div id="container" style="content: center; border: 5px; padding: 20px;">
+        <h1 style="font-size: 60px;">Know your Grade</h1>
+        <div id="display0">
+            <p>A+</p>
+            <input type='number' id="aplus"></br>
+            <p>A</p>
+            <input type='number' id="aonly"></br>
+            <p>B</p>
+            <input type='number' id="bonly"></br>
+            <p>C</p>
+            <input type='number' id="conly"></br>
+            <p>D</p>
+            <input type='number' id="donly"></br>
+            <p>E</p>
+            <input type='number' id="eonly"></br>
+            <br>
+            <button id="calculate" class="animated infinite jello" type="button"
+                onclick="setGrade()">Calculate</button>
+            <br>
+        </div>
+        <div id="tryagain" style="display: none;">
+            <div id="display1" style="border: 10px; padding: 10px;">
+                <p id="resultObject"></p>
+            </div>
+            <div div id="display2" style="border: 10px; padding: 10px;">
+                <p id="resultObject"></p>
+                <button class="animated hinge" type="button" style="margin-top:20; align: center; "onclick="tryagain()" >Try
+                    Again?</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        function setGrade() {
+    var aPlus, aOnly, bOnly, cOnly, dOnly, eOnly ;
+    aPlus = Number(document.getElementById("aplus").value);
+    aOnly = Number(document.getElementById("aonly").value);
+    bOnly = Number(document.getElementById("bonly").value);
+    cOnly = Number(document.getElementById("conly").value);
+    dOnly = Number(document.getElementById("donly").value);
+    eOnly = Number(document.getElementById("eonly").value);
+    function KnowYourGrade(aPlus, aOnly, bOnly, cOnly, dOnly, eOnly);
+  
+  
+    function KnowYourGrade(aPlus, aOnly, bOnly, cOnly, dOnly, eOnly ) {
+      var myGrade;
+      console.log("Value Changed");
+        myGrade = (aPlus * 10 + aOnly * 9 + bOnly * 8 + cOnly * 7 + dOnly * 6 + eOnly * 5) / (aPlus + aOnly + bOnly + cOnly + dOnly + eOnly);
+        document.getElementById("resultObject").innerHTML =  myGrade;
+        console.log("Value Changed");
+      }
+    }
+  
+
+
+    </script>
+    <footer style="  position: relative; margin-top:40px; right: 0; bottom: 0; width: 100%; color: white; text-align: center; ">
+        Made with 💖
+    </footer>
+</body>
+
+</html>
